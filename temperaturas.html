@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de temperaturas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #7976e5 0%, #b886cd 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: sans-serif;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        nav a.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .card {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 420px;
+            margin: auto;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .card h1 {
+            font-size: 26px;
+            color: #111;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        input[type="number"], select {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 15px;
+            color: #555;
+            border: 1.5px solid #4cae4c;
+            border-radius: 8px;
+            outline: none;
+            background-color: #fff;
+        }
+
+        input[type="number"]::placeholder {
+            color: #aaa;
+        }
+
+        button {
+            background-color: #4eb759;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #429f4b;
+        }
+
+        #resultado {
+            margin-top: 25px;
+            font-size: 18px;
+            color: #222;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="temperaturas.html" class="active">Conversor de temperaturas</a>
+    </nav>
+
+    <div class="card">
+        <h1>Conversor de temperaturas</h1>
+
+        <div class="form-group">
+            <label for="temperatura">Temperatura:</label>
+            <input type="number" id="temperatura" placeholder="Ingresa la temperatura" step="any">
+        </div>
+
+        <div class="form-group">
+            <label for="tipoConversion">Tipo de conversión:</label>
+            <select id="tipoConversion">
+                <option value="cToF">Celsius a Fahrenheit</option>
+                <option value="fToC">Fahrenheit a Celsius</option>
+            </select>
+        </div>
+
+        <button type="button" onclick="convertir()">Convertir</button>
+
+        <p id="resultado"></p>
+    </div>
+
+    <script src="temperaturas.js"></script>
+</body>
+</html>

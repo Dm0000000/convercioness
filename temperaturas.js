@@ -1,7 +1,11 @@
 let cInput = document.getElementById("celsius");
 let fInput = document.getElementById("fahrenheit");
-let boton = document.getElementById("btn");
+let boton = document.getElementById("btnConvertir"); // <-- Aquí estaba el error (antes decía "btn")
 let textoResultado = document.getElementById("resultado");
+
+// Limpia el otro campo cuando escribes en uno, para poder convertir de ida y vuelta sin problemas
+cInput.addEventListener("input", () => fInput.value = "");
+fInput.addEventListener("input", () => cInput.value = "");
 
 boton.addEventListener("click", function() {
     let c = cInput.value;

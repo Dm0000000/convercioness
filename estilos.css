@@ -36,7 +36,7 @@ label {
     font-size: 14px;
 }
 
-input {
+input, select {
     width: 100%;
     padding: 10px;
     border: 1px solid #4CAF50;
@@ -44,6 +44,7 @@ input {
     box-sizing: border-box;
     outline: none;
     font-size: 14px;
+    background-color: white;
 }
 
 button {
@@ -66,4 +67,5 @@ button:hover {
     margin-top: 15px;
     font-weight: bold;
     color: #333;
+    font-size: 16px;
 }
